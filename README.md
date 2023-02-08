@@ -61,7 +61,7 @@ Download the dataset from [google drive](https://drive.google.com/file/d/1diLfsm
 
 ## Reproduce the Results
 
-Once the dataset is ready, you will be able to run the whole training and testing process using the command in [Experiments.md](https://github.com/boshi-an/E2EAff/blob/main/Experiments.md).
+Once the dataset is ready, you will be able to run the whole training and testing process using the command in [Experiments.md](https://github.com/hyperplane-lab/RLAfford/blob/main/Experiments.md).
 
 ## Cite
 
