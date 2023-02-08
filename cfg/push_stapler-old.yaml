@@ -1,0 +1,147 @@
+task:
+  useStage: False
+  useSlider: False
+  useGroundTruth: False
+  useTaskId: False
+
+env:
+  env_name: "push_stapler"
+  numTrain: 2048
+  numVal: 0
+  numObservations: 50
+  numActions: 9
+  envSpacing: 2.0
+  maxEpisodeLength: 256
+  actionSpeedScale: 20
+  enableDebugVis: False
+
+  contactBufferSize: 512
+  contactMovingThreshold: 0.1
+
+  pointFeatureDim: 512
+  objPointDownsampleNum: 2048
+  handPointDownsampleNum: 64
+  pointNetLR: 0.0001
+  visualizePointcloud: False
+
+  enableCameraSensors: False
+  depth_bar: 10
+  map_dis_bar: 0.1
+  moving_pc_mode: False
+
+  driveMode: "pos"
+  clipObservations: 5.0
+  clipActions: 1.0
+
+  asset:
+    assetRoot: "assets"
+    AssetNumTrain: 1
+    AssetNumVal: 0
+    randomAsset: False    
+    trainObjAssets:
+      0:
+        name: 100028
+        path: "dataset/open_pot_data/100028/mobility.urdf"
+        pointCloud: assets/dataset/pap_data/object2pick_2/bag/5/model_normalized_v_pc.npy
+      1:
+        name: 100032
+        path: "dataset/open_pot_data/100032/mobility.urdf"
+        pointCloud: assets/dataset/pap_data/object2pick_2/bag/5/model_normalized_v_pc.npy
+      2:
+        name: 100033
+        path: "dataset/open_pot_data/100033/mobility.urdf"
+        pointCloud: assets/dataset/pap_data/object2pick_2/bag/5/model_normalized_v_pc.npy
+      3:
+        name: 100038
+        path: "dataset/open_pot_data/100038/mobility.urdf"
+        pointCloud: assets/dataset/pap_data/object2pick_2/bag/5/model_normalized_v_pc.npy
+      4:
+        name: 100040
+        path: "dataset/open_pot_data/100040/mobility.urdf"
+        pointCloud: assets/dataset/pap_data/object2pick_2/bag/5/model_normalized_v_pc.npy
+      5:
+        name: 100045
+        path: "dataset/open_pot_data/100045/mobility.urdf"
+        pointCloud: assets/dataset/pap_data/object2pick_2/bag/5/model_normalized_v_pc.npy
+      6:
+        name: 100047
+        path: "dataset/open_pot_data/100047/mobility.urdf"
+        pointCloud: assets/dataset/pap_data/object2pick_2/bag/5/model_normalized_v_pc.npy
+      7:
+        name: 100051
+        path: "dataset/open_pot_data/100051/mobility.urdf"
+        pointCloud: assets/dataset/pap_data/object2pick_2/bag/5/model_normalized_v_pc.npy
+      8:
+        name: 100054
+        path: "dataset/open_pot_data/100054/mobility.urdf"
+        pointCloud: assets/dataset/pap_data/object2pick_2/bag/5/model_normalized_v_pc.npy
+      9:
+        name: 100055
+        path: "dataset/open_pot_data/100055/mobility.urdf"
+        pointCloud: assets/dataset/pap_data/object2pick_2/bag/5/model_normalized_v_pc.npy
+      10:
+        name: 100056
+        path: "dataset/open_pot_data/100056/mobility.urdf"
+        pointCloud: assets/dataset/pap_data/object2pick_2/bag/5/model_normalized_v_pc.npy
+      11:
+        name: 100057
+        path: "dataset/open_pot_data/100057/mobility.urdf"
+        pointCloud: assets/dataset/pap_data/object2pick_2/bag/5/model_normalized_v_pc.npy
+      12:
+        name: 100058
+        path: "dataset/open_pot_data/100058/mobility.urdf"
+        pointCloud: assets/dataset/pap_data/object2pick_2/bag/5/model_normalized_v_pc.npy
+      13:
+        name: 100060
+        path: "dataset/open_pot_data/100060/mobility.urdf"
+        pointCloud: assets/dataset/pap_data/object2pick_2/bag/5/model_normalized_v_pc.npy
+      14:
+        name: 100613
+        path: "dataset/open_pot_data/100613/mobility.urdf"
+        pointCloud: assets/dataset/pap_data/object2pick_2/bag/5/model_normalized_v_pc.npy
+      15:
+        name: 100619
+        path: "dataset/open_pot_data/100619/mobility.urdf"
+        pointCloud: assets/dataset/pap_data/object2pick_2/bag/5/model_normalized_v_pc.npy
+      16:
+        name: 100623
+        path: "dataset/open_pot_data/100623/mobility.urdf"
+        pointCloud: assets/dataset/pap_data/object2pick_2/bag/5/model_normalized_v_pc.npy
+      17:
+        name: 100693
+        path: "dataset/open_pot_data/100693/mobility.urdf"
+        pointCloud: assets/dataset/pap_data/object2pick_2/bag/5/model_normalized_v_pc.npy
+      18:
+        name: 102080
+        path: "dataset/open_pot_data/102080/mobility.urdf"
+        pointCloud: assets/dataset/pap_data/object2pick_2/bag/5/model_normalized_v_pc.npy
+      19:
+        name: 102085
+        path: "dataset/open_pot_data/102085/mobility.urdf"
+        pointCloud: assets/dataset/pap_data/object2pick_2/bag/5/model_normalized_v_pc.npy
+
+    testAssets:
+      2:
+        name: 2
+        object_path: dataset/Mobility-dataset/102990/mobility.urdf
+        object_pointCloud: assets/dataset/pap_data/geo_data/daily_object/2/model_meshlabserver_normalized_v_pc.npy
+        hook_path: dataset/pap_data/geo_data/hook_wall/1/model_concave_no_wall.urdf
+        hook_pointCloud: assets/dataset/pap_data/geo_data/hook_wall/1/model_small_wall_pc.npy
+
+sim:
+  substeps: 2
+  physx:
+    num_threads: 4
+    solver_type: 1  # 0: pgs, 1: tgs
+    num_position_iterations: 8
+    num_velocity_iterations: 0
+    contact_offset: 0.002
+    rest_offset: 0.0
+    bounce_threshold_velocity: 0.2
+    max_depenetration_velocity: 1000.0
+    default_buffer_size_multiplier: 5.0
+  flex:
+    num_outer_iterations: 5
+    num_inner_iterations: 20
+    warm_start: 0.8
+    relaxation: 0.75 

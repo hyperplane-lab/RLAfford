@@ -1,0 +1,487 @@
+# if given, will override the device setting in gym. 
+
+task:
+  target: close
+  randomize: False
+
+env:
+  env_name: "franka_cabinet_pc_partial"
+  numEnvs: 1
+  numObservations: 72
+  numActions: 9
+  envSpacing: 2.0
+  maxEpisodeLength: 72
+  actionSpeedScale: 20
+  enableDebugVis: False
+
+  contactBufferSize: 4096
+  contactMovingThreshold: 0.1
+  contactSaveSteps: 512
+  contactSavePath: "runs/cabinetPCPartialClose/"
+
+  pointFeatureDim: 128
+  pointDownsampleNum: 4096
+  pointNetLR: 0.0001
+  visualizePointcloud: True
+
+  enableCameraSensors: True
+  depth_bar: 10
+  map_dis_bar: 0.5
+
+  reset:
+    cabinet:
+      resetPositionNoise: 0.1
+      resetRotationNoise: 0.0
+      resetDofPosRandomInterval: 0.05
+      resetDofVelRandomInterval: 0.0
+    franka:
+      resetPositionNoise: 0.1
+      resetRotationNoise: 0.0
+      resetDofPosRandomInterval: 0.2
+      resetDofVelRandomInterval: 0.2
+
+  driveMode: "pos"
+  clipObservations: 5.0
+  clipActions: 1.0
+
+  # about reward calculation
+  closeDoor:
+    doorReward: 10.0
+    successBonus: 20.0
+    actPenalty: 0.0000
+    distPenalty: 10.0
+    graspOffset: 0.1
+    distEps: 0.001
+  
+  asset:
+    assetRoot: "assets"
+    cabinetAssetNum: 1  # real length is 447
+    randomAsset: True
+    cabinetAssets:
+      35059_link_0:
+        boundingBox: dataset/one_door_cabinet/35059_link_0/bounding_box.json
+        handle: dataset/one_door_cabinet/35059_link_0/handle.txt
+        name: 35059_link_0
+        path: dataset/one_door_cabinet/35059_link_0/mobility.urdf
+        pointCloud: dataset/one_door_cabinet/35059_link_0/point_sample/ply-10000.ply
+        dir: -1
+      41083_link_1:
+        boundingBox: dataset/one_door_cabinet/41083_link_1/bounding_box.json
+        handle: dataset/one_door_cabinet/41083_link_1/handle.txt
+        name: 41083_link_1
+        path: dataset/one_door_cabinet/41083_link_1/mobility.urdf
+        pointCloud: dataset/one_door_cabinet/41083_link_1/point_sample/ply-10000.ply
+        dir: -1
+      41510_link_0:
+        boundingBox: dataset/one_door_cabinet/41510_link_0/bounding_box.json
+        handle: dataset/one_door_cabinet/41510_link_0/handle.txt
+        name: 41510_link_0
+        path: dataset/one_door_cabinet/41510_link_0/mobility.urdf
+        pointCloud: dataset/one_door_cabinet/41510_link_0/point_sample/ply-10000.ply
+        dir: -1
+      44781_link_0:
+        boundingBox: dataset/one_door_cabinet/44781_link_0/bounding_box.json
+        handle: dataset/one_door_cabinet/44781_link_0/handle.txt
+        name: 44781_link_0
+        path: dataset/one_door_cabinet/44781_link_0/mobility.urdf
+        pointCloud: dataset/one_door_cabinet/44781_link_0/point_sample/ply-10000.ply
+        dir: 1
+      44826_link_0:
+        boundingBox: dataset/one_door_cabinet/44826_link_0/bounding_box.json
+        handle: dataset/one_door_cabinet/44826_link_0/handle.txt
+        name: 44826_link_0
+        path: dataset/one_door_cabinet/44826_link_0/mobility.urdf
+        pointCloud: dataset/one_door_cabinet/44826_link_0/point_sample/ply-10000.ply
+        dir: -1
+      45001_link_0:
+        boundingBox: dataset/one_door_cabinet/45001_link_0/bounding_box.json
+        handle: dataset/one_door_cabinet/45001_link_0/handle.txt
+        name: 45001_link_0
+        path: dataset/one_door_cabinet/45001_link_0/mobility.urdf
+        pointCloud: dataset/one_door_cabinet/45001_link_0/point_sample/ply-10000.ply
+        dir: 1
+      45001_link_1:
+        boundingBox: dataset/one_door_cabinet/45001_link_1/bounding_box.json
+        handle: dataset/one_door_cabinet/45001_link_1/handle.txt
+        name: 45001_link_1
+        path: dataset/one_door_cabinet/45001_link_1/mobility.urdf
+        pointCloud: dataset/one_door_cabinet/45001_link_1/point_sample/ply-10000.ply
+        dir: -1
+      45146_link_1:
+        boundingBox: dataset/one_door_cabinet/45146_link_1/bounding_box.json
+        handle: dataset/one_door_cabinet/45146_link_1/handle.txt
+        name: 45146_link_1
+        path: dataset/one_door_cabinet/45146_link_1/mobility.urdf
+        pointCloud: dataset/one_door_cabinet/45146_link_1/point_sample/ply-10000.ply
+        dir: -1
+      45162_link_0:
+        boundingBox: dataset/one_door_cabinet/45162_link_0/bounding_box.json
+        handle: dataset/one_door_cabinet/45162_link_0/handle.txt
+        name: 45162_link_0
+        path: dataset/one_door_cabinet/45162_link_0/mobility.urdf
+        pointCloud: dataset/one_door_cabinet/45162_link_0/point_sample/ply-10000.ply
+        dir: 1
+      45168_link_1:
+        boundingBox: dataset/one_door_cabinet/45168_link_1/bounding_box.json
+        handle: dataset/one_door_cabinet/45168_link_1/handle.txt
+        name: 45168_link_1
+        path: dataset/one_door_cabinet/45168_link_1/mobility.urdf
+        pointCloud: dataset/one_door_cabinet/45168_link_1/point_sample/ply-10000.ply
+        dir: -1
+      45194_link_0:
+        boundingBox: dataset/one_door_cabinet/45194_link_0/bounding_box.json
+        handle: dataset/one_door_cabinet/45194_link_0/handle.txt
+        name: 45194_link_0
+        path: dataset/one_door_cabinet/45194_link_0/mobility.urdf
+        pointCloud: dataset/one_door_cabinet/45194_link_0/point_sample/ply-10000.ply
+        dir: 1
+      45194_link_1:
+        boundingBox: dataset/one_door_cabinet/45194_link_1/bounding_box.json
+        handle: dataset/one_door_cabinet/45194_link_1/handle.txt
+        name: 45194_link_1
+        path: dataset/one_door_cabinet/45194_link_1/mobility.urdf
+        pointCloud: dataset/one_door_cabinet/45194_link_1/point_sample/ply-10000.ply
+        dir: -1
+      45213_link_0:
+        boundingBox: dataset/one_door_cabinet/45213_link_0/bounding_box.json
+        handle: dataset/one_door_cabinet/45213_link_0/handle.txt
+        name: 45213_link_0
+        path: dataset/one_door_cabinet/45213_link_0/mobility.urdf
+        pointCloud: dataset/one_door_cabinet/45213_link_0/point_sample/ply-10000.ply
+        dir: -1
+      45219_link_0:
+        boundingBox: dataset/one_door_cabinet/45219_link_0/bounding_box.json
+        handle: dataset/one_door_cabinet/45219_link_0/handle.txt
+        name: 45219_link_0
+        path: dataset/one_door_cabinet/45219_link_0/mobility.urdf
+        pointCloud: dataset/one_door_cabinet/45219_link_0/point_sample/ply-10000.ply
+        dir: 1
+      45219_link_1:
+        boundingBox: dataset/one_door_cabinet/45219_link_1/bounding_box.json
+        handle: dataset/one_door_cabinet/45219_link_1/handle.txt
+        name: 45219_link_1
+        path: dataset/one_door_cabinet/45219_link_1/mobility.urdf
+        pointCloud: dataset/one_door_cabinet/45219_link_1/point_sample/ply-10000.ply
+        dir: -1
+      45235_link_0:
+        boundingBox: dataset/one_door_cabinet/45235_link_0/bounding_box.json
+        handle: dataset/one_door_cabinet/45235_link_0/handle.txt
+        name: 45235_link_0
+        path: dataset/one_door_cabinet/45235_link_0/mobility.urdf
+        pointCloud: dataset/one_door_cabinet/45235_link_0/point_sample/ply-10000.ply
+        dir: -1
+      45238_link_0:
+        boundingBox: dataset/one_door_cabinet/45238_link_0/bounding_box.json
+        handle: dataset/one_door_cabinet/45238_link_0/handle.txt
+        name: 45238_link_0
+        path: dataset/one_door_cabinet/45238_link_0/mobility.urdf
+        pointCloud: dataset/one_door_cabinet/45238_link_0/point_sample/ply-10000.ply
+        dir: 1
+      45238_link_1:
+        boundingBox: dataset/one_door_cabinet/45238_link_1/bounding_box.json
+        handle: dataset/one_door_cabinet/45238_link_1/handle.txt
+        name: 45238_link_1
+        path: dataset/one_door_cabinet/45238_link_1/mobility.urdf
+        pointCloud: dataset/one_door_cabinet/45238_link_1/point_sample/ply-10000.ply
+        dir: -1
+      45244_link_0:
+        boundingBox: dataset/one_door_cabinet/45244_link_0/bounding_box.json
+        handle: dataset/one_door_cabinet/45244_link_0/handle.txt
+        name: 45244_link_0
+        path: dataset/one_door_cabinet/45244_link_0/mobility.urdf
+        pointCloud: dataset/one_door_cabinet/45244_link_0/point_sample/ply-10000.ply
+        dir: 1
+      45249_link_0:
+        boundingBox: dataset/one_door_cabinet/45249_link_0/bounding_box.json
+        handle: dataset/one_door_cabinet/45249_link_0/handle.txt
+        name: 45249_link_0
+        path: dataset/one_door_cabinet/45249_link_0/mobility.urdf
+        pointCloud: dataset/one_door_cabinet/45249_link_0/point_sample/ply-10000.ply
+        dir: -1
+      45305_link_0:
+        boundingBox: dataset/one_door_cabinet/45305_link_0/bounding_box.json
+        handle: dataset/one_door_cabinet/45305_link_0/handle.txt
+        name: 45305_link_0
+        path: dataset/one_door_cabinet/45305_link_0/mobility.urdf
+        pointCloud: dataset/one_door_cabinet/45305_link_0/point_sample/ply-10000.ply
+        dir: 1
+      45305_link_1:
+        boundingBox: dataset/one_door_cabinet/45305_link_1/bounding_box.json
+        handle: dataset/one_door_cabinet/45305_link_1/handle.txt
+        name: 45305_link_1
+        path: dataset/one_door_cabinet/45305_link_1/mobility.urdf
+        pointCloud: dataset/one_door_cabinet/45305_link_1/point_sample/ply-10000.ply
+        dir: -1
+      45332_link_0:
+        boundingBox: dataset/one_door_cabinet/45332_link_0/bounding_box.json
+        handle: dataset/one_door_cabinet/45332_link_0/handle.txt
+        name: 45332_link_0
+        path: dataset/one_door_cabinet/45332_link_0/mobility.urdf
+        pointCloud: dataset/one_door_cabinet/45332_link_0/point_sample/ply-10000.ply
+        dir: 1
+      45332_link_1:
+        boundingBox: dataset/one_door_cabinet/45332_link_1/bounding_box.json
+        handle: dataset/one_door_cabinet/45332_link_1/handle.txt
+        name: 45332_link_1
+        path: dataset/one_door_cabinet/45332_link_1/mobility.urdf
+        pointCloud: dataset/one_door_cabinet/45332_link_1/point_sample/ply-10000.ply
+        dir: -1
+      45354_link_0:
+        boundingBox: dataset/one_door_cabinet/45354_link_0/bounding_box.json
+        handle: dataset/one_door_cabinet/45354_link_0/handle.txt
+        name: 45354_link_0
+        path: dataset/one_door_cabinet/45354_link_0/mobility.urdf
+        pointCloud: dataset/one_door_cabinet/45354_link_0/point_sample/ply-10000.ply
+        dir: -1
+      45354_link_1:
+        boundingBox: dataset/one_door_cabinet/45354_link_1/bounding_box.json
+        handle: dataset/one_door_cabinet/45354_link_1/handle.txt
+        name: 45354_link_1
+        path: dataset/one_door_cabinet/45354_link_1/mobility.urdf
+        pointCloud: dataset/one_door_cabinet/45354_link_1/point_sample/ply-10000.ply
+        dir: 1
+      45378_link_0:
+        boundingBox: dataset/one_door_cabinet/45378_link_0/bounding_box.json
+        handle: dataset/one_door_cabinet/45378_link_0/handle.txt
+        name: 45378_link_0
+        path: dataset/one_door_cabinet/45378_link_0/mobility.urdf
+        pointCloud: dataset/one_door_cabinet/45378_link_0/point_sample/ply-10000.ply
+        dir: 1
+      45378_link_1:
+        boundingBox: dataset/one_door_cabinet/45378_link_1/bounding_box.json
+        handle: dataset/one_door_cabinet/45378_link_1/handle.txt
+        name: 45378_link_1
+        path: dataset/one_door_cabinet/45378_link_1/mobility.urdf
+        pointCloud: dataset/one_door_cabinet/45378_link_1/point_sample/ply-10000.ply
+        dir: -1
+      45384_link_0:
+        boundingBox: dataset/one_door_cabinet/45384_link_0/bounding_box.json
+        handle: dataset/one_door_cabinet/45384_link_0/handle.txt
+        name: 45384_link_0
+        path: dataset/one_door_cabinet/45384_link_0/mobility.urdf
+        pointCloud: dataset/one_door_cabinet/45384_link_0/point_sample/ply-10000.ply
+        dir: 1
+      45397_link_0:
+        boundingBox: dataset/one_door_cabinet/45397_link_0/bounding_box.json
+        handle: dataset/one_door_cabinet/45397_link_0/handle.txt
+        name: 45397_link_0
+        path: dataset/one_door_cabinet/45397_link_0/mobility.urdf
+        pointCloud: dataset/one_door_cabinet/45397_link_0/point_sample/ply-10000.ply
+        dir: 1
+      45397_link_1:
+        boundingBox: dataset/one_door_cabinet/45397_link_1/bounding_box.json
+        handle: dataset/one_door_cabinet/45397_link_1/handle.txt
+        name: 45397_link_1
+        path: dataset/one_door_cabinet/45397_link_1/mobility.urdf
+        pointCloud: dataset/one_door_cabinet/45397_link_1/point_sample/ply-10000.ply
+        dir: -1
+      45420_link_0:
+        boundingBox: dataset/one_door_cabinet/45420_link_0/bounding_box.json
+        handle: dataset/one_door_cabinet/45420_link_0/handle.txt
+        name: 45420_link_0
+        path: dataset/one_door_cabinet/45420_link_0/mobility.urdf
+        pointCloud: dataset/one_door_cabinet/45420_link_0/point_sample/ply-10000.ply
+        dir: 1
+      45420_link_1:
+        boundingBox: dataset/one_door_cabinet/45420_link_1/bounding_box.json
+        handle: dataset/one_door_cabinet/45420_link_1/handle.txt
+        name: 45420_link_1
+        path: dataset/one_door_cabinet/45420_link_1/mobility.urdf
+        pointCloud: dataset/one_door_cabinet/45420_link_1/point_sample/ply-10000.ply
+        dir: -1
+      45448_link_0:
+        boundingBox: dataset/one_door_cabinet/45448_link_0/bounding_box.json
+        handle: dataset/one_door_cabinet/45448_link_0/handle.txt
+        name: 45448_link_0
+        path: dataset/one_door_cabinet/45448_link_0/mobility.urdf
+        pointCloud: dataset/one_door_cabinet/45448_link_0/point_sample/ply-10000.ply
+        dir: -1
+      45463_link_0:
+        boundingBox: dataset/one_door_cabinet/45463_link_0/bounding_box.json
+        handle: dataset/one_door_cabinet/45463_link_0/handle.txt
+        name: 45463_link_0
+        path: dataset/one_door_cabinet/45463_link_0/mobility.urdf
+        pointCloud: dataset/one_door_cabinet/45463_link_0/point_sample/ply-10000.ply
+        dir: 1
+      45463_link_1:
+        boundingBox: dataset/one_door_cabinet/45463_link_1/bounding_box.json
+        handle: dataset/one_door_cabinet/45463_link_1/handle.txt
+        name: 45463_link_1
+        path: dataset/one_door_cabinet/45463_link_1/mobility.urdf
+        pointCloud: dataset/one_door_cabinet/45463_link_1/point_sample/ply-10000.ply
+        dir: -1
+
+
+      #! test set
+      45949_link_1:
+        boundingBox: dataset/one_door_cabinet/45949_link_1/bounding_box.json
+        handle: dataset/one_door_cabinet/45949_link_1/handle.txt
+        name: 45949_link_1
+        path: dataset/one_door_cabinet/45949_link_1/mobility.urdf
+        pointCloud: dataset/one_door_cabinet/45949_link_1/point_sample/ply-10000.ply
+   
+      45964_link_0:
+        boundingBox: dataset/one_door_cabinet/45964_link_0/bounding_box.json
+        handle: dataset/one_door_cabinet/45964_link_0/handle.txt
+        name: 45964_link_0
+        path: dataset/one_door_cabinet/45964_link_0/mobility.urdf
+        pointCloud: dataset/one_door_cabinet/45964_link_0/point_sample/ply-10000.ply
+    
+      46037_link_1:
+        boundingBox: dataset/one_door_cabinet/46037_link_1/bounding_box.json
+        handle: dataset/one_door_cabinet/46037_link_1/handle.txt
+        name: 46037_link_1
+        path: dataset/one_door_cabinet/46037_link_1/mobility.urdf
+        pointCloud: dataset/one_door_cabinet/46037_link_1/point_sample/ply-10000.ply
+    
+      46084_link_1:
+        boundingBox: dataset/one_door_cabinet/46084_link_1/bounding_box.json
+        handle: dataset/one_door_cabinet/46084_link_1/handle.txt
+        name: 46084_link_1
+        path: dataset/one_door_cabinet/46084_link_1/mobility.urdf
+        pointCloud: dataset/one_door_cabinet/46084_link_1/point_sample/ply-10000.ply
+    
+      46120_link_1:
+        boundingBox: dataset/one_door_cabinet/46120_link_1/bounding_box.json
+        handle: dataset/one_door_cabinet/46120_link_1/handle.txt
+        name: 46120_link_1
+        path: dataset/one_door_cabinet/46120_link_1/mobility.urdf
+        pointCloud: dataset/one_door_cabinet/46120_link_1/point_sample/ply-10000.ply
+    
+      46452_link_0:
+        boundingBox: dataset/one_door_cabinet/46452_link_0/bounding_box.json
+        handle: dataset/one_door_cabinet/46452_link_0/handle.txt
+        name: 46452_link_0
+        path: dataset/one_door_cabinet/46452_link_0/mobility.urdf
+        pointCloud: dataset/one_door_cabinet/46452_link_0/point_sample/ply-10000.ply
+    
+      46480_link_1:
+        boundingBox: dataset/one_door_cabinet/46480_link_1/bounding_box.json
+        handle: dataset/one_door_cabinet/46480_link_1/handle.txt
+        name: 46480_link_1
+        path: dataset/one_door_cabinet/46480_link_1/mobility.urdf
+        pointCloud: dataset/one_door_cabinet/46480_link_1/point_sample/ply-10000.ply
+    
+      46741_link_0:
+        boundingBox: dataset/one_door_cabinet/46741_link_0/bounding_box.json
+        handle: dataset/one_door_cabinet/46741_link_0/handle.txt
+        name: 46741_link_0
+        path: dataset/one_door_cabinet/46741_link_0/mobility.urdf
+        pointCloud: dataset/one_door_cabinet/46741_link_0/point_sample/ply-10000.ply
+    
+      46801_link_1:
+        boundingBox: dataset/one_door_cabinet/46801_link_1/bounding_box.json
+        handle: dataset/one_door_cabinet/46801_link_1/handle.txt
+        name: 46801_link_1
+        path: dataset/one_door_cabinet/46801_link_1/mobility.urdf
+        pointCloud: dataset/one_door_cabinet/46801_link_1/point_sample/ply-10000.ply
+   
+      46825_link_1:
+        boundingBox: dataset/one_door_cabinet/46825_link_1/bounding_box.json
+        handle: dataset/one_door_cabinet/46825_link_1/handle.txt
+        name: 46825_link_1
+        path: dataset/one_door_cabinet/46825_link_1/mobility.urdf
+        pointCloud: dataset/one_door_cabinet/46825_link_1/point_sample/ply-10000.ply
+    
+      46839_link_1:
+        boundingBox: dataset/one_door_cabinet/46839_link_1/bounding_box.json
+        handle: dataset/one_door_cabinet/46839_link_1/handle.txt
+        name: 46839_link_1
+        path: dataset/one_door_cabinet/46839_link_1/mobility.urdf
+        pointCloud: dataset/one_door_cabinet/46839_link_1/point_sample/ply-10000.ply
+    
+      46981_link_1:
+        boundingBox: dataset/one_door_cabinet/46981_link_1/bounding_box.json
+        handle: dataset/one_door_cabinet/46981_link_1/handle.txt
+        name: 46981_link_1
+        path: dataset/one_door_cabinet/46981_link_1/mobility.urdf
+        pointCloud: dataset/one_door_cabinet/46981_link_1/point_sample/ply-10000.ply
+    
+      47088_link_1:
+        boundingBox: dataset/one_door_cabinet/47088_link_1/bounding_box.json
+        handle: dataset/one_door_cabinet/47088_link_1/handle.txt
+        name: 47088_link_1
+        path: dataset/one_door_cabinet/47088_link_1/mobility.urdf
+        pointCloud: dataset/one_door_cabinet/47088_link_1/point_sample/ply-10000.ply
+    
+      47278_link_1:
+        boundingBox: dataset/one_door_cabinet/47278_link_1/bounding_box.json
+        handle: dataset/one_door_cabinet/47278_link_1/handle.txt
+        name: 47278_link_1
+        path: dataset/one_door_cabinet/47278_link_1/mobility.urdf
+        pointCloud: dataset/one_door_cabinet/47278_link_1/point_sample/ply-10000.ply
+    
+      47529_link_0:
+        boundingBox: dataset/one_door_cabinet/47529_link_0/bounding_box.json
+        handle: dataset/one_door_cabinet/47529_link_0/handle.txt
+        name: 47529_link_0
+        path: dataset/one_door_cabinet/47529_link_0/mobility.urdf
+        pointCloud: dataset/one_door_cabinet/47529_link_0/point_sample/ply-10000.ply
+    
+      47944_link_1:
+        boundingBox: dataset/one_door_cabinet/47944_link_1/bounding_box.json
+        handle: dataset/one_door_cabinet/47944_link_1/handle.txt
+        name: 47944_link_1
+        path: dataset/one_door_cabinet/47944_link_1/mobility.urdf
+        pointCloud: dataset/one_door_cabinet/47944_link_1/point_sample/ply-10000.ply
+  
+      48271_link_0:
+        boundingBox: dataset/one_door_cabinet/48271_link_0/bounding_box.json
+        handle: dataset/one_door_cabinet/48271_link_0/handle.txt
+        name: 48271_link_0
+        path: dataset/one_door_cabinet/48271_link_0/mobility.urdf
+        pointCloud: dataset/one_door_cabinet/48271_link_0/point_sample/ply-10000.ply
+    
+      48452_link_0:
+        boundingBox: dataset/one_door_cabinet/48452_link_0/bounding_box.json
+        handle: dataset/one_door_cabinet/48452_link_0/handle.txt
+        name: 48452_link_0
+        path: dataset/one_door_cabinet/48452_link_0/mobility.urdf
+        pointCloud: dataset/one_door_cabinet/48452_link_0/point_sample/ply-10000.ply
+   
+      48513_link_0:
+        boundingBox: dataset/one_door_cabinet/48513_link_0/bounding_box.json
+        handle: dataset/one_door_cabinet/48513_link_0/handle.txt
+        name: 48513_link_0
+        path: dataset/one_door_cabinet/48513_link_0/mobility.urdf
+        pointCloud: dataset/one_door_cabinet/48513_link_0/point_sample/ply-10000.ply
+    
+      49038_link_2:
+        boundingBox: dataset/one_door_cabinet/49038_link_2/bounding_box.json
+        handle: dataset/one_door_cabinet/49038_link_2/handle.txt
+        name: 49038_link_2
+        path: dataset/one_door_cabinet/49038_link_2/mobility.urdf
+        pointCloud: dataset/one_door_cabinet/49038_link_2/point_sample/ply-10000.ply
+    
+      49042_link_1:
+        boundingBox: dataset/one_door_cabinet/49042_link_1/bounding_box.json
+        handle: dataset/one_door_cabinet/49042_link_1/handle.txt
+        name: 49042_link_1
+        path: dataset/one_door_cabinet/49042_link_1/mobility.urdf
+        pointCloud: dataset/one_door_cabinet/49042_link_1/point_sample/ply-10000.ply
+   
+      49133_link_0:
+        boundingBox: dataset/one_door_cabinet/49133_link_0/bounding_box.json
+        handle: dataset/one_door_cabinet/49133_link_0/handle.txt
+        name: 49133_link_0
+        path: dataset/one_door_cabinet/49133_link_0/mobility.urdf
+        pointCloud: dataset/one_door_cabinet/49133_link_0/point_sample/ply-10000.ply
+
+
+sim:
+  substeps: 2
+  physx:
+    num_threads: 4
+    solver_type: 1  # 0: pgs, 1: tgs
+    num_position_iterations: 8
+    num_velocity_iterations: 0
+    contact_offset: 0.002
+    rest_offset: 0.0
+    bounce_threshold_velocity: 0.2
+    max_depenetration_velocity: 1000.0
+    default_buffer_size_multiplier: 5.0
+  flex:
+    num_outer_iterations: 5
+    num_inner_iterations: 20
+    warm_start: 0.8
+    relaxation: 0.75

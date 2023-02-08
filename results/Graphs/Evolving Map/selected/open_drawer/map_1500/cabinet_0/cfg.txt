@@ -1,0 +1,1 @@
+/home/boshi/Documents/Science/E2EAff/logs/franka_cabinet_PC_partial_cp_map/sac_pc_pure/sac_pc_pure_final_sac_cp_open_drawer_seed2/map_1500.pt

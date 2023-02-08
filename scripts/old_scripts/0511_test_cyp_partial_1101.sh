@@ -1,0 +1,1 @@
+python train.py --task=OneFrankaCabinetPCPartial --task_config=cfg/franka_cabinet_PC_partial_cloud_open_handle.yaml --algo=ppo_pc_pure --algo_config=cfg/ppo_pc_pure/config.yaml --headless --rl_device=cuda:1 --sim_device=cuda:1 --seed=1101 --experiment=1101_partial_open_door_test_7obj

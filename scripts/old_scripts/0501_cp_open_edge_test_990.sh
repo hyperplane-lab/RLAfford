@@ -1,0 +1,2 @@
+python train.py --task=OneFrankaCabinetPCPartialCPMap --task_config=cfg/franka_cabinet_PC_partial_cp_map_open.yaml --algo=ppo_pc_pure --algo_config=cfg/ppo_pc_pure/config.yaml --rl_device=cuda:1 --sim_device=cuda:1 --seed=990 --model_dir='/mnt/MARL-CP_gyr/logs/franka_cabinet_PC_partial_cp_map/ppo_pc_pure/ppo_pc_pure_seed990/model_1800.pt' --test
+# /mnt/MARL-CP_gyr/logs/franka_cabinet_PC_partial_cp_map/ppo_pc_pure/ppo_pc_pure_seed1001/CP_7000.pt

@@ -1,0 +1,1 @@
+python train.py --task=OneFrankaCabinetPCPartialCPMap --task_config=cfg/ablations/open_handle_no_observation.yaml --algo=ppo_pc_pure --algo_config=cfg/ppo_pc_pure/opendoor_config.yaml --headless --rl_device=cuda:2 --sim_device=cuda:2 --cp_device=cuda:2 --seed=6 --experiment=ablation_open_door_noobs

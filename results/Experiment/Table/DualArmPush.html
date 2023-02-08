@@ -1,0 +1,76 @@
+<style type="text/css">
+    .tg  {border-collapse:collapse;border-color:#ccc;border-spacing:0;}
+    .tg td{background-color:#fff;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
+      font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;word-break:normal;}
+    .tg th{background-color:#f0f0f0;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
+      font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+    .tg .tg-63jj{font-family:"Times New Roman", Times, serif !important;font-size:12px;font-weight:bold;text-align:center;
+      vertical-align:top}
+    .tg .tg-od1a{font-family:"Times New Roman", Times, serif !important;font-size:12px;text-align:center;vertical-align:top}
+    </style>
+    <table class="tg">
+    <thead>
+      <tr>
+        <th class="tg-od1a" rowspan="2"></th>
+        <th class="tg-od1a" colspan="2">ASR</th>
+        <th class="tg-od1a" colspan="2">MP</th>
+      </tr>
+      <tr>
+        <th class="tg-od1a">train</th>
+        <th class="tg-od1a">test</th>
+        <th class="tg-od1a">train</th>
+        <th class="tg-od1a">test</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="tg-od1a">MAPPO</td>
+        <td class="tg-od1a">7.8<sub>0.3</sub></td>
+        <td class="tg-od1a">9.0<sub>0.2</sub></td>
+        <td class="tg-od1a">0.0<sub>0.0</sub></td>
+        <td class="tg-od1a">0.0<sub>0.0</sub></td>
+      </tr>
+      <tr>
+        <td class="tg-od1a">RL</td>
+        <td class="tg-od1a">37.2<sub>10.0</sub></td>
+        <td class="tg-od1a">36.1<sub>8.9</sub></td>
+        <td class="tg-od1a">36.4<sub>2.1</sub></td>
+        <td class="tg-od1a">31.3<sub>3.7</sub></td>
+      </tr>
+      <tr>
+        <td class="tg-od1a">Multi-task RL</td>
+        <td class="tg-od1a">51.6<sub>0.9</sub></td>
+        <td class="tg-od1a">52.9<sub>1.0</sub></td>
+        <td class="tg-od1a">54.5<sub>10.8</sub></td>
+        <td class="tg-od1a">56.3<sub>9.2</sub></td>
+      </tr>
+      <tr>
+        <td class="tg-63jj">Ours</td>
+        <td class="tg-od1a">83.9<sub>4.1</sub></td>
+        <td class="tg-od1a">78.5<sub>3.7</sub></td>
+        <td class="tg-od1a">91.2<sub>1.2</sub></td>
+        <td class="tg-od1a">90.6<sub>2.1</sub></td>
+      </tr>
+      <tr>
+        <td class="tg-od1a">Ours w/o MPO</td>
+        <td class="tg-63jj">95.9<sub>0.4</sub></td>
+        <td class="tg-63jj">96.3<sub>0.2</sub></td>
+        <td class="tg-63jj">100.0<sub>0.0</sub></td>
+        <td class="tg-63jj">100.0<sub>0.0</sub></td>
+      </tr>
+      <tr>
+        <td class="tg-od1a">Ours w/o MPR</td>
+        <td class="tg-od1a">63.9<sub>7.7</sub></td>
+        <td class="tg-od1a">55.3<sub>10.4</sub></td>
+        <td class="tg-od1a">67.3<sub>4.7</sub></td>
+        <td class="tg-od1a">60.2<sub>2.2</sub></td>
+      </tr>
+      <tr>
+        <td class="tg-od1a">Ours w/o E2E</td>
+        <td class="tg-od1a">53.5<sub>15.4</sub></td>
+        <td class="tg-od1a">55.9<sub>16.8</sub></td>
+        <td class="tg-od1a">57.7<sub>2.0</sub></td>
+        <td class="tg-od1a">59.4<sub>4.5</sub></td>
+      </tr>
+    </tbody>
+    </table>

@@ -1,0 +1,219 @@
+task:
+  useStage: False
+  useSlider: False
+  useGroundTruth: False
+
+env:
+  env_name: "pap_partial"
+  numTrain: 440
+  numVal: 0
+  numObservations: 50
+  numActions: 9
+  envSpacing: 2.0
+  maxEpisodeLength: 128
+  actionSpeedScale: 20
+  enableDebugVis: False
+
+  contactBufferSize: 2048
+  contactMovingThreshold: 0.1
+
+  pointFeatureDim: 512
+  objPointDownsampleNum: 2048
+  handPointDownsampleNum: 64
+  pointNetLR: 0.0001
+  visualizePointcloud: False
+
+  enableCameraSensors: False
+  depth_bar: 10
+  map_dis_bar: 0.1
+  moving_pc_mode: False
+
+  driveMode: "pos"
+  clipObservations: 5.0
+  clipActions: 1.0
+
+  asset:
+    assetRoot: "assets"
+    AssetNumTrain: 22
+    AssetNumVal: 0
+    randomAsset: False   
+    trainObjAssets:
+      4:
+        name: 4
+        path: dataset/pap_data/object2pick_2/bag/11/model_convex_no_wall.urdf
+        pointCloud: assets/dataset/pap_data/object2pick_2/bag/11/model_normalized_v_pc.npy
+      1:
+        name: 1
+        path: dataset/pap_data/object2pick_2/bag/6/model_convex_no_wall.urdf
+        pointCloud: assets/dataset/pap_data/object2pick_2/bag/6/model_normalized_v_pc.npy
+      2:
+        name: 2
+        path: dataset/pap_data/object2pick_2/bag/7/model_convex_no_wall.urdf
+        pointCloud: assets/dataset/pap_data/object2pick_2/bag/7/model_normalized_v_pc.npy
+      5:
+        name: 5
+        path: dataset/pap_data/object2pick_2/bag/13/model_convex_no_wall.urdf
+        pointCloud: assets/dataset/pap_data/object2pick_2/bag/13/model_normalized_v_pc.npy
+      6:
+        name: 6
+        path: dataset/pap_data/object2pick_2/bag/14/model_convex_no_wall.urdf
+        pointCloud: assets/dataset/pap_data/object2pick_2/bag/14/model_normalized_v_pc.npy
+      7:
+        name: 7
+        path: dataset/pap_data/object2pick_2/bag/18/model_convex_no_wall.urdf
+        pointCloud: assets/dataset/pap_data/object2pick_2/bag/18/model_normalized_v_pc.npy
+
+      20:
+        name: 20
+        path: dataset/pap_data/object2pick_2/headphone/1/model_convex_no_wall.urdf
+        pointCloud: assets/dataset/pap_data/object2pick_2/headphone/1/model_normalized_v_pc.npy
+      21:
+        name: 21
+        path: dataset/pap_data/object2pick_2/headphone/2/model_convex_no_wall.urdf
+        pointCloud: assets/dataset/pap_data/object2pick_2/headphone/2/model_normalized_v_pc.npy
+      22:
+        name: 22
+        path: dataset/pap_data/object2pick_2/headphone/3/model_convex_no_wall.urdf
+        pointCloud: assets/dataset/pap_data/object2pick_2/headphone/3/model_normalized_v_pc.npy
+      23:
+        name: 23
+        path: dataset/pap_data/object2pick_2/headphone/4/model_convex_no_wall.urdf
+        pointCloud: assets/dataset/pap_data/object2pick_2/headphone/4/model_normalized_v_pc.npy
+      24:
+        name: 24
+        path: dataset/pap_data/object2pick_2/headphone/5/model_convex_no_wall.urdf
+        pointCloud: assets/dataset/pap_data/object2pick_2/headphone/5/model_normalized_v_pc.npy
+      27:
+        name: 27
+        path: dataset/pap_data/object2pick_2/headphone/8/model_convex_no_wall.urdf
+        pointCloud: assets/dataset/pap_data/object2pick_2/headphone/8/model_normalized_v_pc.npy
+      28:
+        name: 28
+        path: dataset/pap_data/object2pick_2/headphone/9/model_convex_no_wall.urdf
+        pointCloud: assets/dataset/pap_data/object2pick_2/headphone/9/model_normalized_v_pc.npy
+      29:
+        name: 29
+        path: dataset/pap_data/object2pick_2/headphone/10/model_convex_no_wall.urdf
+        pointCloud: assets/dataset/pap_data/object2pick_2/headphone/10/model_normalized_v_pc.npy
+      30:
+        name: 30
+        path: dataset/pap_data/object2pick_2/mug/11/model_convex_no_wall.urdf
+        pointCloud: assets/dataset/pap_data/object2pick_2/mug/11/model_normalized_v_pc.npy
+      33:
+        name: 33
+        path: dataset/pap_data/object2pick_2/mug/45/model_convex_no_wall.urdf
+        pointCloud: assets/dataset/pap_data/object2pick_2/mug/45/model_normalized_v_pc.npy
+      34:
+        name: 34
+        path: dataset/pap_data/object2pick_2/mug/57/model_convex_no_wall.urdf
+        pointCloud: assets/dataset/pap_data/object2pick_2/mug/57/model_normalized_v_pc.npy
+      35:
+        name: 35
+        path: dataset/pap_data/object2pick_2/mug/59/model_convex_no_wall.urdf
+        pointCloud: assets/dataset/pap_data/object2pick_2/mug/59/model_normalized_v_pc.npy
+      36:
+        name: 36
+        path: dataset/pap_data/object2pick_2/mug/64/model_convex_no_wall.urdf
+        pointCloud: assets/dataset/pap_data/object2pick_2/mug/64/model_normalized_v_pc.npy
+      37:
+        name: 37
+        path: dataset/pap_data/object2pick_2/mug/67/model_convex_no_wall.urdf
+        pointCloud: assets/dataset/pap_data/object2pick_2/mug/67/model_normalized_v_pc.npy
+      38:
+        name: 38
+        path: dataset/pap_data/object2pick_2/mug/70/model_convex_no_wall.urdf
+        pointCloud: assets/dataset/pap_data/object2pick_2/mug/70/model_normalized_v_pc.npy
+      39:
+        name: 39
+        path: dataset/pap_data/object2pick_2/mug/73/model_convex_no_wall.urdf
+        pointCloud: assets/dataset/pap_data/object2pick_2/mug/73/model_normalized_v_pc.npy
+    
+    trainTableAssets:
+      19179:
+        name: 19179
+        path: /home/gyr/gyr/file/science/computer/RL/E2EAff/assets/dataset/partnet-mobility-v0/19179/mobility.urdf
+        pointCloud: none
+      19203:
+        name: 19203
+        path: /home/gyr/gyr/file/science/computer/RL/E2EAff/assets/dataset/partnet-mobility-v0/19203/mobility.urdf
+        pointCloud: none
+      20279:
+        name: 20279
+        path: /home/gyr/gyr/file/science/computer/RL/E2EAff/assets/dataset/partnet-mobility-v0/20279/mobility.urdf
+        pointCloud: none
+      22870:
+        name: 22870
+        path: /home/gyr/gyr/file/science/computer/RL/E2EAff/assets/dataset/partnet-mobility-v0/22870/mobility.urdf
+        pointCloud: none
+      23782:
+        name: 23782
+        path: /home/gyr/gyr/file/science/computer/RL/E2EAff/assets/dataset/partnet-mobility-v0/23782/mobility.urdf
+        pointCloud: none
+      23807:
+        name: 23807
+        path: /home/gyr/gyr/file/science/computer/RL/E2EAff/assets/dataset/partnet-mobility-v0/23807/mobility.urdf
+        pointCloud: none
+      25144:
+        name: 25144
+        path: /home/gyr/gyr/file/science/computer/RL/E2EAff/assets/dataset/partnet-mobility-v0/25144/mobility.urdf
+        pointCloud: none
+      25308:
+        name: 25308
+        path: /home/gyr/gyr/file/science/computer/RL/E2EAff/assets/dataset/partnet-mobility-v0/25308/mobility.urdf
+        pointCloud: none
+      100426:
+        name: 100426
+        path: /home/gyr/gyr/file/science/computer/RL/E2EAff/assets/dataset/partnet-mobility-v0/100426/mobility.urdf
+        pointCloud: none
+      29133:
+        name: 29133
+        path: /home/gyr/gyr/file/science/computer/RL/E2EAff/assets/dataset/partnet-mobility-v0/29133/mobility.urdf
+        pointCloud: none
+      30663:
+        name: 30663
+        path: /home/gyr/gyr/file/science/computer/RL/E2EAff/assets/dataset/partnet-mobility-v0/30663/mobility.urdf
+        pointCloud: none
+
+
+    testAssets:
+      8:
+        name: 8
+        path: dataset/pap_data/object2pick_2/bag/20/model_convex_no_wall.urdf
+        pointCloud: assets/dataset/pap_data/object2pick_2/bag/20/model_normalized_v_pc.npy
+      9:
+        name: 9
+        path: dataset/pap_data/object2pick_2/bag/23/model_convex_no_wall.urdf
+        pointCloud: assets/dataset/pap_data/object2pick_2/bag/23/model_normalized_v_pc.npy
+      25:
+        name: 25
+        path: dataset/pap_data/object2pick_2/headphone/6/model_convex_no_wall.urdf
+        pointCloud: assets/dataset/pap_data/object2pick_2/headphone/6/model_normalized_v_pc.npy
+      26:
+        name: 26
+        path: dataset/pap_data/object2pick_2/headphone/7/model_convex_no_wall.urdf
+        pointCloud: assets/dataset/pap_data/object2pick_2/headphone/7/model_normalized_v_pc.npy
+      31:
+        name: 31
+        path: dataset/pap_data/object2pick_2/mug/19/model_convex_no_wall.urdf
+        pointCloud: assets/dataset/pap_data/object2pick_2/mug/19/model_normalized_v_pc.npy
+      32:
+        name: 32
+        path: dataset/pap_data/object2pick_2/mug/43/model_convex_no_wall.urdf
+        pointCloud: assets/dataset/pap_data/object2pick_2/mug/43/model_normalized_v_pc.npy
+sim:
+  substeps: 2
+  physx:
+    num_threads: 4
+    solver_type: 1  # 0: pgs, 1: tgs
+    num_position_iterations: 8
+    num_velocity_iterations: 0
+    contact_offset: 0.002
+    rest_offset: 0.0
+    bounce_threshold_velocity: 0.2
+    max_depenetration_velocity: 1000.0
+    default_buffer_size_multiplier: 5.0
+  flex:
+    num_outer_iterations: 5
+    num_inner_iterations: 20
+    warm_start: 0.8
+    relaxation: 0.75 

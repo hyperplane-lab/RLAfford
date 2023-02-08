@@ -1,0 +1,1 @@
+python train.py --task=PAPRaw --task_config=cfg/pap_raw.yaml --algo=ppo --algo_config=cfg/ppo/pap_config.yaml --rl_device=cuda:0 --sim_device=cuda:0 --pipeline=gpu --graphics_device_id=1 --headless --seed=0 --num_envs=5000

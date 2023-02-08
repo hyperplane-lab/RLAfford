@@ -1,0 +1,137 @@
+env:
+  actionSpeedScale: 20
+  clipActions: 1.0
+  clipObservations: 5.0
+  contactBufferSize: 512
+  contactMovingThreshold: 0.1
+  depth_bar: 10
+  driveMode: pos
+  enableCameraSensors: false
+  enableDebugVis: false
+  envSpacing: 2.0
+  env_name: push_stapler
+  handPointDownsampleNum: 64
+  map_dis_bar: 0.1
+  maxEpisodeLength: 256
+  moving_pc_mode: false
+  numActions: 9
+  numObservations: 38
+  numTrain: 2048
+  numVal: 0
+  objPointDownsampleNum: 2048
+  pointFeatureDim: 512
+  pointNetLR: 0.0001
+  visualizePointcloud: false
+  asset:
+    AssetNumTrain: 13
+    AssetNumVal: 0
+    assetRoot: assets
+    randomAsset: false
+    
+    testObjAssets:
+      15:
+        name: 103297
+        path: dataset/push_stapler_data/103297/mobility.urdf
+        pointCloud: assets/dataset/pap_data/object2pick_2/bag/5/model_normalized_v_pc.npy
+      16:
+        name: 103299
+        path: dataset/push_stapler_data/103299/mobility.urdf
+        pointCloud: assets/dataset/pap_data/object2pick_2/bag/5/model_normalized_v_pc.npy
+      17:
+        name: 103301
+        path: dataset/push_stapler_data/103301/mobility.urdf
+        pointCloud: assets/dataset/pap_data/object2pick_2/bag/5/model_normalized_v_pc.npy
+      # 18:
+      #   name: 103303
+      #   path: dataset/push_stapler_data/103303/mobility.urdf
+      #   pointCloud: assets/dataset/pap_data/object2pick_2/bag/5/model_normalized_v_pc.npy
+      19:
+        name: 103305
+        path: dataset/push_stapler_data/103305/mobility.urdf
+        pointCloud: assets/dataset/pap_data/object2pick_2/bag/5/model_normalized_v_pc.npy
+
+    trainObjAssets:
+      # 0:
+      #   name: 102990
+      #   path: dataset/push_stapler_data/102990/mobility.urdf
+      #   pointCloud: assets/dataset/pap_data/object2pick_2/bag/5/model_normalized_v_pc.npy
+      # 1:
+      #   name: 103095
+      #   path: dataset/push_stapler_data/103095/mobility.urdf
+      #   pointCloud: assets/dataset/pap_data/object2pick_2/bag/5/model_normalized_v_pc.npy
+      2:
+        name: 103099
+        path: dataset/push_stapler_data/103099/mobility.urdf
+        pointCloud: assets/dataset/pap_data/object2pick_2/bag/5/model_normalized_v_pc.npy
+      3:
+        name: 103100
+        path: dataset/push_stapler_data/103100/mobility.urdf
+        pointCloud: assets/dataset/pap_data/object2pick_2/bag/5/model_normalized_v_pc.npy
+      4:
+        name: 103104
+        path: dataset/push_stapler_data/103104/mobility.urdf
+        pointCloud: assets/dataset/pap_data/object2pick_2/bag/5/model_normalized_v_pc.npy
+      5:
+        name: 103111
+        path: dataset/push_stapler_data/103111/mobility.urdf
+        pointCloud: assets/dataset/pap_data/object2pick_2/bag/5/model_normalized_v_pc.npy
+      6:
+        name: 103113
+        path: dataset/push_stapler_data/103113/mobility.urdf
+        pointCloud: assets/dataset/pap_data/object2pick_2/bag/5/model_normalized_v_pc.npy
+      7:
+        name: 103271
+        path: dataset/push_stapler_data/103271/mobility.urdf
+        pointCloud: assets/dataset/pap_data/object2pick_2/bag/5/model_normalized_v_pc.npy
+      8:
+        name: 103273
+        path: dataset/push_stapler_data/103273/mobility.urdf
+        pointCloud: assets/dataset/pap_data/object2pick_2/bag/5/model_normalized_v_pc.npy
+      9:
+        name: 103275
+        path: dataset/push_stapler_data/103275/mobility.urdf
+        pointCloud: assets/dataset/pap_data/object2pick_2/bag/5/model_normalized_v_pc.npy
+      10:
+        name: 103276
+        path: dataset/push_stapler_data/103276/mobility.urdf
+        pointCloud: assets/dataset/pap_data/object2pick_2/bag/5/model_normalized_v_pc.npy
+      11:
+        name: 103280
+        path: dataset/push_stapler_data/103280/mobility.urdf
+        pointCloud: assets/dataset/pap_data/object2pick_2/bag/5/model_normalized_v_pc.npy
+      12:
+        name: 103283
+        path: dataset/push_stapler_data/103283/mobility.urdf
+        pointCloud: assets/dataset/pap_data/object2pick_2/bag/5/model_normalized_v_pc.npy
+      13:
+        name: 103292
+        path: dataset/push_stapler_data/103292/mobility.urdf
+        pointCloud: assets/dataset/pap_data/object2pick_2/bag/5/model_normalized_v_pc.npy
+      14:
+        name: 103293
+        path: dataset/push_stapler_data/103293/mobility.urdf
+        pointCloud: assets/dataset/pap_data/object2pick_2/bag/5/model_normalized_v_pc.npy
+
+  
+sim:
+  flex:
+    num_inner_iterations: 20
+    num_outer_iterations: 5
+    relaxation: 0.75
+    warm_start: 0.8
+  physx:
+    bounce_threshold_velocity: 0.2
+    contact_offset: 0.002
+    default_buffer_size_multiplier: 5.0
+    max_depenetration_velocity: 1000.0
+    num_position_iterations: 8
+    num_threads: 4
+    num_velocity_iterations: 0
+    rest_offset: 0.0
+    solver_type: 1
+  substeps: 2
+task:
+  useGroundTruth: false
+  useSlider: false
+  useStage: false
+  useTaskId: false

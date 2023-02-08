@@ -1,0 +1,1 @@
+python train.py --task=OneFrankaCabinetPCPartial --task_config=cfg/franka_drawer_PC_partial_cloud_close.yaml --algo=ppo_pc_pure --algo_config=cfg/ppo_pc_pure/config.yaml --headless --rl_device=cuda:2 --sim_device=cuda:2 --seed=6001 --experiment=0506_partial_close_drawer_6001

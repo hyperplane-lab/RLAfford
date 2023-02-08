@@ -1,0 +1,1 @@
+/home/boshi/Documents/Science/E2EAff/logs/two_franka_chair_pc_partial_cp_map/ppo_pc_pure/ppo_pc_pure_new5_cp_push_seed-1/map01_3000.pt

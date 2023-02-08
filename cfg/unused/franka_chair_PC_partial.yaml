@@ -1,0 +1,418 @@
+# if given, will override the device setting in gym. 
+
+task:
+  randomize: False
+  
+
+cp:
+  iter_interval: 10
+  feat_dim: 128
+  lr: 0.01
+  weight_decay: 1e-5
+  lr_decay_by: 0.9
+  lr_decay_every: 5000
+  device: 1
+  loss_weight_action_score: 100.0
+  test: False
+
+
+env:
+  env_name: "franka_chair_pc_partial"
+  numEnvs: 1
+  numObservations: 134
+  numActions: 9
+  envSpacing: 2.0
+  maxEpisodeLength: 72
+  actionSpeedScale: 20
+  enableDebugVis: False
+
+  contactBufferSize: 4096
+  contactMovingThreshold: 0.1
+  contactSaveSteps: 512
+  contactSavePath: "runs/chairPCPartial/"
+
+  pointFeatureDim: 128
+  pointDownsampleNum: 4096
+  pointNetLR: 0.0001
+  visualizePointcloud: False
+
+  enableCameraSensors: True
+  depth_bar: 10
+  map_dis_bar: 0.2
+  success_rate_bar: 0.2
+  use_collision_predictor: True
+
+  reset:
+    chair:
+      resetPositionNoise: 0.1
+      resetRotationNoise: 0.0
+      resetDofPosRandomInterval: 0.05
+      resetDofVelRandomInterval: 0.0
+    franka:
+      resetPositionNoise: 0.1
+      resetRotationNoise: 0.0
+      resetDofPosRandomInterval: 0.2
+      resetDofVelRandomInterval: 0.2
+
+  driveMode: "pos"
+  clipObservations: 5.0
+  clipActions: 1.0
+
+  # about reward calculation
+  
+  doorReward: 1.0
+  actPenalty: 0.0000
+  distPenalty: 50.0
+  graspOffset: 0.1
+  successBonus: 10.0
+  
+
+  asset:
+    assetRoot: "assets"
+    chairAssetNum: 1  # real length is 447
+    randomAsset: False
+    chairAssets:
+      '179':
+        link_num: 17
+        name: '179'
+        path: dataset/chair//179/mobility.urdf
+      '2230':
+        link_num: 17
+        name: '2230'
+        path: dataset/chair//2230/mobility.urdf
+      '2320':
+        link_num: 17
+        name: '2320'
+        path: dataset/chair//2320/mobility.urdf
+      '2364':
+        link_num: 19
+        name: '2364'
+        path: dataset/chair//2364/mobility.urdf
+      '2440':
+        link_num: 18
+        name: '2440'
+        path: dataset/chair//2440/mobility.urdf
+      '2471':
+        link_num: 7
+        name: '2471'
+        path: dataset/chair//2471/mobility.urdf
+      '2490':
+        link_num: 12
+        name: '2490'
+        path: dataset/chair//2490/mobility.urdf
+      '2554':
+        link_num: 18
+        name: '2554'
+        path: dataset/chair//2554/mobility.urdf
+      '2627':
+        link_num: 20
+        name: '2627'
+        path: dataset/chair//2627/mobility.urdf
+      '2780':
+        link_num: 13
+        name: '2780'
+        path: dataset/chair//2780/mobility.urdf
+      '3028':
+        link_num: 18
+        name: '3028'
+        path: dataset/chair//3028/mobility.urdf
+      '3091':
+        link_num: 13
+        name: '3091'
+        path: dataset/chair//3091/mobility.urdf
+      '3140':
+        link_num: 19
+        name: '3140'
+        path: dataset/chair//3140/mobility.urdf
+      '3143':
+        link_num: 19
+        name: '3143'
+        path: dataset/chair//3143/mobility.urdf
+      '3171':
+        link_num: 17
+        name: '3171'
+        path: dataset/chair//3171/mobility.urdf
+      '3193':
+        link_num: 13
+        name: '3193'
+        path: dataset/chair//3193/mobility.urdf
+      '35063':
+        link_num: 14
+        name: '35063'
+        path: dataset/chair//35063/mobility.urdf
+      '36250':
+        link_num: 17
+        name: '36250'
+        path: dataset/chair//36250/mobility.urdf
+      '36280':
+        link_num: 17
+        name: '36280'
+        path: dataset/chair//36280/mobility.urdf
+      '36409':
+        link_num: 14
+        name: '36409'
+        path: dataset/chair//36409/mobility.urdf
+      '36761':
+        link_num: 17
+        name: '36761'
+        path: dataset/chair//36761/mobility.urdf
+      '36845':
+        link_num: 12
+        name: '36845'
+        path: dataset/chair//36845/mobility.urdf
+      '36912':
+        link_num: 18
+        name: '36912'
+        path: dataset/chair//36912/mobility.urdf
+      '36983':
+        link_num: 19
+        name: '36983'
+        path: dataset/chair//36983/mobility.urdf
+      '37099':
+        link_num: 17
+        name: '37099'
+        path: dataset/chair//37099/mobility.urdf
+      '37247':
+        link_num: 7
+        name: '37247'
+        path: dataset/chair//37247/mobility.urdf
+      '37351':
+        link_num: 18
+        name: '37351'
+        path: dataset/chair//37351/mobility.urdf
+      '37825':
+        link_num: 17
+        name: '37825'
+        path: dataset/chair//37825/mobility.urdf
+      '37834':
+        link_num: 13
+        name: '37834'
+        path: dataset/chair//37834/mobility.urdf
+      '37954':
+        link_num: 18
+        name: '37954'
+        path: dataset/chair//37954/mobility.urdf
+      '38287':
+        link_num: 18
+        name: '38287'
+        path: dataset/chair//38287/mobility.urdf
+      '38325':
+        link_num: 12
+        name: '38325'
+        path: dataset/chair//38325/mobility.urdf
+      '38357':
+        link_num: 12
+        name: '38357'
+        path: dataset/chair//38357/mobility.urdf
+      '38368':
+        link_num: 18
+        name: '38368'
+        path: dataset/chair//38368/mobility.urdf
+      '38486':
+        link_num: 12
+        name: '38486'
+        path: dataset/chair//38486/mobility.urdf
+      '38510':
+        link_num: 18
+        name: '38510'
+        path: dataset/chair//38510/mobility.urdf
+      '38519':
+        link_num: 17
+        name: '38519'
+        path: dataset/chair//38519/mobility.urdf
+      '38803':
+        link_num: 18
+        name: '38803'
+        path: dataset/chair//38803/mobility.urdf
+      '38841':
+        link_num: 12
+        name: '38841'
+        path: dataset/chair//38841/mobility.urdf
+      '38994':
+        link_num: 19
+        name: '38994'
+        path: dataset/chair//38994/mobility.urdf
+      '39015':
+        link_num: 12
+        name: '39015'
+        path: dataset/chair//39015/mobility.urdf
+      '39047':
+        link_num: 3
+        name: '39047'
+        path: dataset/chair//39047/mobility.urdf
+      '39138':
+        link_num: 17
+        name: '39138'
+        path: dataset/chair//39138/mobility.urdf
+      '39313':
+        link_num: 17
+        name: '39313'
+        path: dataset/chair//39313/mobility.urdf
+      '39392':
+        link_num: 14
+        name: '39392'
+        path: dataset/chair//39392/mobility.urdf
+      '39432':
+        link_num: 17
+        name: '39432'
+        path: dataset/chair//39432/mobility.urdf
+      '39485':
+        link_num: 12
+        name: '39485'
+        path: dataset/chair//39485/mobility.urdf
+      '39551':
+        link_num: 17
+        name: '39551'
+        path: dataset/chair//39551/mobility.urdf
+      '39628':
+        link_num: 13
+        name: '39628'
+        path: dataset/chair//39628/mobility.urdf
+      '39988':
+        link_num: 18
+        name: '39988'
+        path: dataset/chair//39988/mobility.urdf
+      '40067':
+        link_num: 19
+        name: '40067'
+        path: dataset/chair//40067/mobility.urdf
+      '40069':
+        link_num: 12
+        name: '40069'
+        path: dataset/chair//40069/mobility.urdf
+      '40168':
+        link_num: 19
+        name: '40168'
+        path: dataset/chair//40168/mobility.urdf
+      '40225':
+        link_num: 18
+        name: '40225'
+        path: dataset/chair//40225/mobility.urdf
+      '40890':
+        link_num: 12
+        name: '40890'
+        path: dataset/chair//40890/mobility.urdf
+      '40982':
+        link_num: 18
+        name: '40982'
+        path: dataset/chair//40982/mobility.urdf
+      '41045':
+        link_num: 18
+        name: '41045'
+        path: dataset/chair//41045/mobility.urdf
+      '41153':
+        link_num: 18
+        name: '41153'
+        path: dataset/chair//41153/mobility.urdf
+      '41434':
+        link_num: 12
+        name: '41434'
+        path: dataset/chair//41434/mobility.urdf
+      '41438':
+        link_num: 13
+        name: '41438'
+        path: dataset/chair//41438/mobility.urdf
+      '41609':
+        link_num: 17
+        name: '41609'
+        path: dataset/chair//41609/mobility.urdf
+      '41610':
+        link_num: 18
+        name: '41610'
+        path: dataset/chair//41610/mobility.urdf
+      '41653':
+        link_num: 12
+        name: '41653'
+        path: dataset/chair//41653/mobility.urdf
+      '41667':
+        link_num: 12
+        name: '41667'
+        path: dataset/chair//41667/mobility.urdf
+      '41838':
+        link_num: 17
+        name: '41838'
+        path: dataset/chair//41838/mobility.urdf
+      '42001':
+        link_num: 18
+        name: '42001'
+        path: dataset/chair//42001/mobility.urdf
+      '42057':
+        link_num: 19
+        name: '42057'
+        path: dataset/chair//42057/mobility.urdf
+      '42378':
+        link_num: 20
+        name: '42378'
+        path: dataset/chair//42378/mobility.urdf
+      '42452':
+        link_num: 12
+        name: '42452'
+        path: dataset/chair//42452/mobility.urdf
+      '42556':
+        link_num: 10
+        name: '42556'
+        path: dataset/chair//42556/mobility.urdf
+      '42647':
+        link_num: 12
+        name: '42647'
+        path: dataset/chair//42647/mobility.urdf
+      '42856':
+        link_num: 17
+        name: '42856'
+        path: dataset/chair//42856/mobility.urdf
+      '43074':
+        link_num: 18
+        name: '43074'
+        path: dataset/chair//43074/mobility.urdf
+      '43142':
+        link_num: 19
+        name: '43142'
+        path: dataset/chair//43142/mobility.urdf
+      '44441':
+        link_num: 15
+        name: '44441'
+        path: dataset/chair//44441/mobility.urdf
+      '44445':
+        link_num: 12
+        name: '44445'
+        path: dataset/chair//44445/mobility.urdf
+      '44729':
+        link_num: 18
+        name: '44729'
+        path: dataset/chair//44729/mobility.urdf
+      '44876':
+        link_num: 14
+        name: '44876'
+        path: dataset/chair//44876/mobility.urdf
+      '44961':
+        link_num: 14
+        name: '44961'
+        path: dataset/chair//44961/mobility.urdf
+      '723':
+        link_num: 12
+        name: '723'
+        path: dataset/chair//723/mobility.urdf
+      '762':
+        link_num: 17
+        name: '762'
+        path: dataset/chair//762/mobility.urdf
+
+
+    
+sim:
+  substeps: 2
+  physx:
+    num_threads: 4
+    solver_type: 1  # 0: pgs, 1: tgs
+    num_position_iterations: 8
+    num_velocity_iterations: 0
+    contact_offset: 0.002
+    rest_offset: 0.0
+    bounce_threshold_velocity: 0.2
+    max_depenetration_velocity: 1000.0
+    default_buffer_size_multiplier: 5.0
+  flex:
+    num_outer_iterations: 5
+    num_inner_iterations: 20
+    warm_start: 0.8
+    relaxation: 0.75

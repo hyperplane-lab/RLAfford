@@ -1,0 +1,98 @@
+<style type="text/css">
+    .tg  {border-collapse:collapse;border-color:#ccc;border-spacing:0;}
+    .tg td{background-color:#fff;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
+      font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;word-break:normal;}
+    .tg th{background-color:#f0f0f0;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
+      font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+    .tg .tg-pht7{border-color:inherit;font-family:"Times New Roman", Times, serif !important;font-size:12px;text-align:center;
+      vertical-align:top}
+    .tg .tg-37c6{border-color:inherit;font-family:"Times New Roman", Times, serif !important;font-size:12px;font-weight:bold;
+      text-align:center;vertical-align:top}
+    </style>
+    <table class="tg">
+    <thead>
+      <tr>
+        <th class="tg-pht7" rowspan="2"></th>
+        <th class="tg-pht7" colspan="2">ASR</th>
+        <th class="tg-pht7" colspan="2">MP</th>
+      </tr>
+      <tr>
+        <th class="tg-pht7">train</th>
+        <th class="tg-pht7">test</th>
+        <th class="tg-pht7">train</th>
+        <th class="tg-pht7">test</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="tg-pht7">RL</td>
+        <td class="tg-pht7">25.2<sub>5.7</sub></td>
+        <td class="tg-pht7">22.1<sub>5.2</sub></td>
+        <td class="tg-pht7">19.2<sub>2.4</sub></td>
+        <td class="tg-pht7">11.5<sub>1.3</sub></td>
+      </tr>
+      <tr>
+        <td class="tg-pht7">RL+O2OAfford</td>
+        <td class="tg-pht7">26.1<sub>5.8</sub></td>
+        <td class="tg-pht7">22.2<sub>4.7</sub></td>
+        <td class="tg-pht7">19.2<sub>1.9</sub></td>
+        <td class="tg-pht7">11.5<sub>1.9</sub></td>
+      </tr>
+      <tr>
+        <td class="tg-pht7">RL+Where2act</td>
+        <td class="tg-pht7">28.6<sub>8.3</sub></td>
+        <td class="tg-pht7">23.5<sub>7.6</sub></td>
+        <td class="tg-pht7">23.1<sub>1.6</sub></td>
+        <td class="tg-pht7">15.4<sub>0.0</sub></td>
+      </tr>
+      <tr>
+        <td class="tg-pht7">RL+O2OAfford+Where2act</td>
+        <td class="tg-pht7">30.5<sub>8.1</sub></td>
+        <td class="tg-pht7">26.2<sub>5.7</sub></td>
+        <td class="tg-pht7">23.1<sub>1.8</sub></td>
+        <td class="tg-pht7">15.4<sub>3.8</sub></td>
+      </tr>
+      <tr>
+        <td class="tg-37c6">Ours</td>
+        <td class="tg-37c6">46.5<sub>9.1</sub></td>
+        <td class="tg-37c6">39.2<sub>7.1</sub></td>
+        <td class="tg-37c6">30.7<sub>1.6</sub></td>
+        <td class="tg-37c6">26.9<sub>1.3</sub></td>
+      </tr>
+      <tr>
+        <td class="tg-pht7">Ours w/o A2O Map</td>
+        <td class="tg-pht7">26.7<sub>7.9</sub></td>
+        <td class="tg-pht7">22.3<sub>3.9</sub></td>
+        <td class="tg-pht7">23.1<sub>2.8</sub></td>
+        <td class="tg-pht7">19.2<sub>0.9</sub></td>
+      </tr>
+      <tr>
+        <td class="tg-pht7">Ours w/o O2O Map</td>
+        <td class="tg-pht7">31.9<sub>10.2</sub></td>
+        <td class="tg-pht7">26.2<sub>5.7</sub></td>
+        <td class="tg-pht7">23.1<sub>0.0</sub></td>
+        <td class="tg-pht7">15.4<sub>1.3</sub></td>
+      </tr>
+      <tr>
+        <td class="tg-pht7">Ours w/o MPO</td>
+        <td class="tg-pht7">40.1<sub>8.7</sub></td>
+        <td class="tg-pht7">30.2<sub>7.8</sub></td>
+        <td class="tg-pht7">19.2<sub>2.4</sub></td>
+        <td class="tg-pht7">15.4<sub>1.6</sub></td>
+      </tr>
+      <tr>
+        <td class="tg-pht7">Ours w/o MPR</td>
+        <td class="tg-pht7">36.2<sub>8.9</sub></td>
+        <td class="tg-pht7">33.5<sub>7.7</sub></td>
+        <td class="tg-37c6">30.7<sub>1.3</sub></td>
+        <td class="tg-pht7">23.1<sub>1.3</sub></td>
+      </tr>
+      <tr>
+        <td class="tg-pht7">Ours w/o E2E</td>
+        <td class="tg-pht7">30.2<sub>8.2</sub></td>
+        <td class="tg-pht7">21.4<sub>3.0</sub></td>
+        <td class="tg-pht7">26.9<sub>2.6</sub></td>
+        <td class="tg-pht7">19.2<sub>1.8</sub></td>
+      </tr>
+    </tbody>
+    </table>

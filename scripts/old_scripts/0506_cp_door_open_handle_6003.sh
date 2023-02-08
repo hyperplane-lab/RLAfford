@@ -1,0 +1,1 @@
+python train.py --task=OneFrankaCabinetPCPartialCPMap --task_config=cfg/franka_cabinet_PC_partial_cp_map_open_handle.yaml --algo=ppo_pc_pure --algo_config=cfg/ppo_pc_pure/config.yaml --headless --rl_device=cuda:0 --sim_device=cuda:0 --cp_device=cuda:0 --seed=6003 --experiment=0506_cp_open_handle_old_pn

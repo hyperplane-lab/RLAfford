@@ -1,0 +1,1 @@
+python train.py --task=OneFrankaCabinet --task_config=cfg/franka_cabinet_state_close.yaml --algo=ppo --algo_config=cfg/ppo/config.yaml --rl_device=cuda:0 --sim_device=cuda:0 --seed=0 --pipeline=cpu
