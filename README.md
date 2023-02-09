@@ -1,6 +1,9 @@
 # RLAfford
 
-RLAfford: End-to-end Affordance Learning with Reinforcement Learning
+Official Implementation of "RLAfford: End-to-end Affordance Learning with Reinforcement Learning" ICRA 2023
+
+- [Webpage](https://sites.google.com/view/rlafford/)
+- [ArXiv](https://arxiv.org/pdf/2209.12941.pdf)
 
 ## Introduction
 
@@ -73,3 +76,5 @@ Once the dataset is ready, you will be able to run the whole training and testin
   year={2023}
 }
 ```
+
+Feel free to contact hao.dong@pku.edu.cn for collaboration
