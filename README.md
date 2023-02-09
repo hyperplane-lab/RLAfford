@@ -1,6 +1,6 @@
-# RL-Afford
+# RLAfford
 
-End-to-end Affordance Learning with Reinforcement Learning
+RLAfford: End-to-end Affordance Learning with Reinforcement Learning
 
 ## Introduction
 
