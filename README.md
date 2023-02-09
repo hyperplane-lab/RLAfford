@@ -69,7 +69,7 @@ Once the dataset is ready, you will be able to run the whole training and testin
 @article{geng2022end,
   title={End-to-End Affordance Learning for Robotic Manipulation},
   author={Geng, Yiran and An, Boshi and Geng, Haoran and Chen, Yuanpei and Yang, Yaodong and Dong, Hao},
-  journal={arXiv preprint arXiv:2209.12941},
-  year={2022}
+  journal={International Conference on Robotics and Automation (ICRA)},
+  year={2023}
 }
 ```
