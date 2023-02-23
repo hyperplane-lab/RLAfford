@@ -60,7 +60,7 @@ pip install -e .
 
 ## Dataset Preparation
 
-Download the dataset from [google drive](https://drive.google.com/file/d/1PfMZ9KzLn2Z8mbGq9HfW58u6BnuDGT3W/view?usp=sharing) and extract it. Move the `asset` folder to the root of this project. The dataset includes objects from SAPIEN dataset along with additional information processed by us. Code to prepare the dataset can be accessed in [this github repo](https://github.com/boshi-an/SapienDataset).
+Download the dataset from [google drive](https://drive.google.com/drive/folders/1FyTuz17uSmAbVSmJUbgb-7OgRM5TalCK?usp=sharing) and extract it. Move the `asset` folder to the root of this project. The dataset includes objects from SAPIEN dataset along with additional information processed by us. Code to prepare the dataset can be accessed in [this github repo](https://github.com/boshi-an/SapienDataset).
 
 ## Reproduce the Results
 
