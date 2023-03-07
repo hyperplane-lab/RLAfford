@@ -226,7 +226,7 @@ class TwoFrankaChairPCPartialCPMap(TwoFrankaChairPCPartial) :
                     self._get_max_point(self.sampled_chair_pc[:, :, :3], self.sampled_chair_pc[:, :, 4])
                 )
             )
-            max_point = torch.transpose(max_point, 0, 10)
+            max_point = torch.transpose(max_point, 0, 1)
             self.obs_buf[:, :, 7:] = self._get_base_observation(max_point).view(self.num_envs, 1, -1).repeat_interleave(self.pointCloudDownsampleNum, dim=1)
         else :
             self.obs_buf[:, :, 7:] = self._get_base_observation().view(self.num_envs, 1, -1).repeat_interleave(self.pointCloudDownsampleNum, dim=1)

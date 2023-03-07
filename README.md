@@ -66,6 +66,10 @@ Download the dataset from [google drive](https://drive.google.com/drive/folders/
 
 Once the dataset is ready, you will be able to run the whole training and testing process using the command in [Experiments.md](https://github.com/hyperplane-lab/RLAfford/blob/main/Experiments.md).
 
+## Draw the Pointcloud
+
+We used Mitsuba3 to draw pointcloud and affordance map. Mitsuba provided beautiful visualizations. Scripts can be accesed in the repo [Visualization](https://github.com/GengYiran/Draw_PointCloud) .
+
 ## Cite
 
 ```latex
