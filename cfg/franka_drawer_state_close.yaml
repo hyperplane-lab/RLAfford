@@ -10,7 +10,7 @@ task:
 
 env:
   env_name: "franka_drawer_state_close"
-  numTrain: 352
+  numTrain: 4
   numVal: 0
   numObservations: 49
   numActions: 11
@@ -53,7 +53,7 @@ env:
   asset:
     assetRoot: "assets"
     datasetPath: "dataset/one_drawer_cabinet"
-    cabinetAssetNumTrain: 6
+    cabinetAssetNumTrain: 2
     cabinetAssetNumVal: 0
     randomAsset: False
 
