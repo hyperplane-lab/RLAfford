@@ -53,7 +53,7 @@ env:
   asset:
     assetRoot: "assets"
     datasetPath: "dataset/one_door_cabinet"
-    cabinetAssetNumTrain: 6
+    cabinetAssetNumTrain: 44
     cabinetAssetNumVal: 0
     randomAsset: False
 

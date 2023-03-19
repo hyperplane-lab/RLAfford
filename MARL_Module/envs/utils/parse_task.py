@@ -13,11 +13,11 @@ from tasks.franka_cabinet_PC_partial_cp_state import OneFrankaCabinetPCPartialCP
 from tasks.franka_cabinet_PC_where2act import OneFrankaCabinetPCWhere2act
 from tasks.franka_grasp import OneFrankaGrasp
 from tasks.franka_pap import PAPRaw
-from tasks.franka_push_stapler import PushStapler
-from tasks.franka_open_pot import OpenPot
+# from tasks.franka_push_stapler import PushStapler
+# from tasks.franka_open_pot import OpenPot
 
 from tasks.franka_pap_partial import PAPPartial
-from tasks.franka_pap_a2o import PAPA2O
+# from tasks.franka_pap_a2o import PAPA2O
 from tasks.franka_grasp_PC_partial import OneFrankaGraspPCPartial
 from tasks.franka_chair import TwoFrankaChair
 from tasks.franka_chair_PC_partial import TwoFrankaChairPCPartial

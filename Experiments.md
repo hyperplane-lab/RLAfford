@@ -65,28 +65,10 @@ python train.py --task=TwoFrankaChairPCPartialCPMap --task_config=cfg/franka_cha
 
 ## Pick and Place
 #### State
-???
-#### Partial 
-???
-#### Cp Map
-???
-#### w/o A2O
-???
-#### w/o O2O CP
-???
+python train.py --task=PAPRaw --task_config=cfg/pap_raw.yaml --algo=ppo --algo_config=cfg/ppo/pap_config.yaml --rl_device=cuda:0 --sim_device=cuda:0 --pipeline=gpu --graphics_device_id=0 --headless --seed=0
 
-## PushStapler
-#### State
-???
 #### Partial 
-???
-#### Cp Map
-???
+python train.py --task=PAPPartial --task_config=cfg/pap_partial.yaml --algo=ppo_pc_pure --algo_config=cfg/ppo_pc_pure/pap_config.yaml --rl_device=cuda:0 --sim_device=cuda:0 --headless --seed=0
 
-## OpenPot
-#### State
-???
-#### Partial 
-???
-#### Cp Map
-???
+
+## Other tasks will update soon!

@@ -201,6 +201,9 @@ env:
         name: 32
         path: dataset/pap_data/object2pick_2/mug/43/model_convex_no_wall.urdf
         pointCloud: assets/dataset/pap_data/object2pick_2/mug/43/model_normalized_v_pc.npy
+
+
+
 sim:
   substeps: 2
   physx:
