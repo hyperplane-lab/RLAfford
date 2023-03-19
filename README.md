@@ -17,6 +17,7 @@ The contact predictor allows the agent to learn the affordance information (*i.e
 We use our framework on several downstream tasks. The experimental result and analysis demonstrate the effectiveness of end-to-end affordance learning.
 
 ## Requirements
+We test our code in NVIDIA-driver version $\geq$ 515, cuda Version $\geq$ 11.7 and  python $\geq$ 3.8 environment can run successfully, if the version is not correct may lead to errors, such as `segmentation fault`.
 
 Some dependencies can be installed by
 
