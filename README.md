@@ -74,11 +74,13 @@ We used Mitsuba3 to draw pointcloud and affordance map. Mitsuba provided beautif
 ## Cite
 
 ```latex
-@article{geng2022end,
-  title={End-to-End Affordance Learning for Robotic Manipulation},
+@inproceedings{geng2023rlafford,
+  title={RLAfford: End-to-End Affordance Learning for Robotic Manipulation},
   author={Geng, Yiran and An, Boshi and Geng, Haoran and Chen, Yuanpei and Yang, Yaodong and Dong, Hao},
-  journal={International Conference on Robotics and Automation (ICRA)},
-  year={2023}
+  booktitle={2023 IEEE International Conference on Robotics and Automation (ICRA)},
+  pages={5880--5886},
+  year={2023},
+  organization={IEEE}
 }
 ```
 
