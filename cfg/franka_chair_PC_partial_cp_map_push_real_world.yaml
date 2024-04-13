@@ -1,0 +1,346 @@
+# if given, will override the device setting in gym. 
+
+task:
+  target: close
+  useHandle: False
+  useDrawer: False
+  useStage: False
+  useSlider: True
+  useGroundTruth: False
+
+cp:
+  input_feat: 3
+  feat_dim: 128
+  lr: 0.0001
+  weight_decay: 1e-5
+  CP_iter: 6
+  cp_minibatch_size: 22
+  lr_decay_by: 1.0
+  lr_decay_every: 1000
+  device: 0
+  loss_weight_action_score: 1.0
+  multi_gpu: False
+  device_ids: [0,1]
+  output_device_id: 0
+  max_point_reward: 0.01
+  max_point_observation: True
+  affordance_augmentation: True
+  success_rate_bar: 0.1
+
+env:
+  env_name: "franka_chair_pc_partial_cloud_push"
+  numTrain: 352
+  numVal: 128
+  numObservations: 105
+  numActions: 22
+  envSpacing: 2.0
+  maxEpisodeLength: 192
+  actionSpeedScale: 20
+  enableDebugVis: False
+
+  contactBufferSize: 512
+  contactMovingThreshold: 0.1
+  contactPosThreshold: 0.01
+
+  pointFeatureDim: 512
+  chairPointDownsampleNum: 2048
+  chairPointOriginalNum: 8192
+  handPointDownsampleNum: 64
+  pointNetLR: 0.0001
+  visualizePointcloud: False
+
+  enableCameraSensors: False
+  depth_bar: 10
+  map_dis_bar: 0.1
+
+  reset:
+    chair:
+      resetPositionNoise: 0.0
+      resetRotationNoise: 0.0
+      resetDofPosRandomInterval: 0.0
+      resetDofVelRandomInterval: 0.0
+    franka:
+      resetPositionNoise: 0.0
+      resetRotationNoise: 0.0
+      resetDofPosRandomInterval: 0.0
+      resetDofVelRandomInterval: 0.0
+
+  driveMode: "pos"
+  clipObservations: 5.0
+  clipActions: 1.0
+
+  asset:
+    assetRoot: "assets"
+    datasetPath: "dataset/chair"
+    assetNumTrain: 44
+    assetNumVal: 16
+    randomAsset: False
+
+    trainAssets:
+      '179':
+        boundingBox: dataset/chair/179/bounding_box.json
+        name: '179'
+        path: dataset/chair/179/mobility.urdf
+      '2320':
+        boundingBox: dataset/chair/2320/bounding_box.json
+        name: '2320'
+        path: dataset/chair/2320/mobility.urdf
+      '2364':
+        boundingBox: dataset/chair/2364/bounding_box.json
+        name: '2364'
+        path: dataset/chair/2364/mobility.urdf
+      '2440':
+        boundingBox: dataset/chair/2440/bounding_box.json
+        name: '2440'
+        path: dataset/chair/2440/mobility.urdf
+      '2554':
+        boundingBox: dataset/chair/2554/bounding_box.json
+        name: '2554'
+        path: dataset/chair/2554/mobility.urdf
+      '2627':
+        boundingBox: dataset/chair/2627/bounding_box.json
+        name: '2627'
+        path: dataset/chair/2627/mobility.urdf
+      '3028':
+        boundingBox: dataset/chair/3028/bounding_box.json
+        name: '3028'
+        path: dataset/chair/3028/mobility.urdf
+      '3091':
+        boundingBox: dataset/chair/3091/bounding_box.json
+        name: '3091'
+        path: dataset/chair/3091/mobility.urdf
+      '3140':
+        boundingBox: dataset/chair/3140/bounding_box.json
+        name: '3140'
+        path: dataset/chair/3140/mobility.urdf
+      '3143':
+        boundingBox: dataset/chair/3143/bounding_box.json
+        name: '3143'
+        path: dataset/chair/3143/mobility.urdf
+      '3171':
+        boundingBox: dataset/chair/3171/bounding_box.json
+        name: '3171'
+        path: dataset/chair/3171/mobility.urdf
+      '36250':
+        boundingBox: dataset/chair/36250/bounding_box.json
+        name: '36250'
+        path: dataset/chair/36250/mobility.urdf
+      '36409':
+        boundingBox: dataset/chair/36409/bounding_box.json
+        name: '36409'
+        path: dataset/chair/36409/mobility.urdf
+      '36912':
+        boundingBox: dataset/chair/36912/bounding_box.json
+        name: '36912'
+        path: dataset/chair/36912/mobility.urdf
+      '36983':
+        boundingBox: dataset/chair/36983/bounding_box.json
+        name: '36983'
+        path: dataset/chair/36983/mobility.urdf
+      '37099':
+        boundingBox: dataset/chair/37099/bounding_box.json
+        name: '37099'
+        path: dataset/chair/37099/mobility.urdf
+      '37247':
+        boundingBox: dataset/chair/37247/bounding_box.json
+        name: '37247'
+        path: dataset/chair/37247/mobility.urdf
+      '37351':
+        boundingBox: dataset/chair/37351/bounding_box.json
+        name: '37351'
+        path: dataset/chair/37351/mobility.urdf
+      '37954':
+        boundingBox: dataset/chair/37954/bounding_box.json
+        name: '37954'
+        path: dataset/chair/37954/mobility.urdf
+      '38287':
+        boundingBox: dataset/chair/38287/bounding_box.json
+        name: '38287'
+        path: dataset/chair/38287/mobility.urdf
+      '38325':
+        boundingBox: dataset/chair/38325/bounding_box.json
+        name: '38325'
+        path: dataset/chair/38325/mobility.urdf
+      '38357':
+        boundingBox: dataset/chair/38357/bounding_box.json
+        name: '38357'
+        path: dataset/chair/38357/mobility.urdf
+      '38368':
+        boundingBox: dataset/chair/38368/bounding_box.json
+        name: '38368'
+        path: dataset/chair/38368/mobility.urdf
+      '38486':
+        boundingBox: dataset/chair/38486/bounding_box.json
+        name: '38486'
+        path: dataset/chair/38486/mobility.urdf
+      '38510':
+        boundingBox: dataset/chair/38510/bounding_box.json
+        name: '38510'
+        path: dataset/chair/38510/mobility.urdf
+      '38519':
+        boundingBox: dataset/chair/38519/bounding_box.json
+        name: '38519'
+        path: dataset/chair/38519/mobility.urdf
+      '38803':
+        boundingBox: dataset/chair/38803/bounding_box.json
+        name: '38803'
+        path: dataset/chair/38803/mobility.urdf
+      '38841':
+        boundingBox: dataset/chair/38841/bounding_box.json
+        name: '38841'
+        path: dataset/chair/38841/mobility.urdf
+      '38994':
+        boundingBox: dataset/chair/38994/bounding_box.json
+        name: '38994'
+        path: dataset/chair/38994/mobility.urdf
+      '39015':
+        boundingBox: dataset/chair/39015/bounding_box.json
+        name: '39015'
+        path: dataset/chair/39015/mobility.urdf
+      '39047':
+        boundingBox: dataset/chair/39047/bounding_box.json
+        name: '39047'
+        path: dataset/chair/39047/mobility.urdf
+      '39313':
+        boundingBox: dataset/chair/39313/bounding_box.json
+        name: '39313'
+        path: dataset/chair/39313/mobility.urdf
+      '39392':
+        boundingBox: dataset/chair/39392/bounding_box.json
+        name: '39392'
+        path: dataset/chair/39392/mobility.urdf
+      '39485':
+        boundingBox: dataset/chair/39485/bounding_box.json
+        name: '39485'
+        path: dataset/chair/39485/mobility.urdf
+      '39551':
+        boundingBox: dataset/chair/39551/bounding_box.json
+        name: '39551'
+        path: dataset/chair/39551/mobility.urdf
+      '39628':
+        boundingBox: dataset/chair/39628/bounding_box.json
+        name: '39628'
+        path: dataset/chair/39628/mobility.urdf
+      '39988':
+        boundingBox: dataset/chair/39988/bounding_box.json
+        name: '39988'
+        path: dataset/chair/39988/mobility.urdf
+      '40067':
+        boundingBox: dataset/chair/40067/bounding_box.json
+        name: '40067'
+        path: dataset/chair/40067/mobility.urdf
+      '40069':
+        boundingBox: dataset/chair/40069/bounding_box.json
+        name: '40069'
+        path: dataset/chair/40069/mobility.urdf
+      '40168':
+        boundingBox: dataset/chair/40168/bounding_box.json
+        name: '40168'
+        path: dataset/chair/40168/mobility.urdf
+      '40890':
+        boundingBox: dataset/chair/40890/bounding_box.json
+        name: '40890'
+        path: dataset/chair/40890/mobility.urdf
+      '40982':
+        boundingBox: dataset/chair/40982/bounding_box.json
+        name: '40982'
+        path: dataset/chair/40982/mobility.urdf
+      '41153':
+        boundingBox: dataset/chair/41153/bounding_box.json
+        name: '41153'
+        path: dataset/chair/41153/mobility.urdf
+      '41434':
+        boundingBox: dataset/chair/41434/bounding_box.json
+        name: '41434'
+        path: dataset/chair/41434/mobility.urdf
+
+
+
+
+
+
+    testAssets:
+      '41438':
+        boundingBox: dataset/chair/41438/bounding_box.json
+        name: '41438'
+        path: dataset/chair/41438/mobility.urdf
+      '41610':
+        boundingBox: dataset/chair/41610/bounding_box.json
+        name: '41610'
+        path: dataset/chair/41610/mobility.urdf
+      '41653':
+        boundingBox: dataset/chair/41653/bounding_box.json
+        name: '41653'
+        path: dataset/chair/41653/mobility.urdf
+      '41667':
+        boundingBox: dataset/chair/41667/bounding_box.json
+        name: '41667'
+        path: dataset/chair/41667/mobility.urdf
+      '41838':
+        boundingBox: dataset/chair/41838/bounding_box.json
+        name: '41838'
+        path: dataset/chair/41838/mobility.urdf
+      '42057':
+        boundingBox: dataset/chair/42057/bounding_box.json
+        name: '42057'
+        path: dataset/chair/42057/mobility.urdf
+      '42378':
+        boundingBox: dataset/chair/42378/bounding_box.json
+        name: '42378'
+        path: dataset/chair/42378/mobility.urdf
+      '42452':
+        boundingBox: dataset/chair/42452/bounding_box.json
+        name: '42452'
+        path: dataset/chair/42452/mobility.urdf
+      '42556':
+        boundingBox: dataset/chair/42556/bounding_box.json
+        name: '42556'
+        path: dataset/chair/42556/mobility.urdf
+      '42647':
+        boundingBox: dataset/chair/42647/bounding_box.json
+        name: '42647'
+        path: dataset/chair/42647/mobility.urdf
+      '44441':
+        boundingBox: dataset/chair/44441/bounding_box.json
+        name: '44441'
+        path: dataset/chair/44441/mobility.urdf
+      '44445':
+        boundingBox: dataset/chair/44445/bounding_box.json
+        name: '44445'
+        path: dataset/chair/44445/mobility.urdf
+      '44729':
+        boundingBox: dataset/chair/44729/bounding_box.json
+        name: '44729'
+        path: dataset/chair/44729/mobility.urdf
+      '44876':
+        boundingBox: dataset/chair/44876/bounding_box.json
+        name: '44876'
+        path: dataset/chair/44876/mobility.urdf
+      '44961':
+        boundingBox: dataset/chair/44961/bounding_box.json
+        name: '44961'
+        path: dataset/chair/44961/mobility.urdf
+      '723':
+        boundingBox: dataset/chair/723/bounding_box.json
+        name: '723'
+        path: dataset/chair/723/mobility.urdf
+
+
+
+sim:
+  substeps: 2
+  physx:
+    num_threads: 4
+    solver_type: 1  # 0: pgs, 1: tgs
+    num_position_iterations: 8
+    num_velocity_iterations: 0
+    contact_offset: 0.002
+    rest_offset: 0.0
+    bounce_threshold_velocity: 0.2
+    max_depenetration_velocity: 1000.0
+    default_buffer_size_multiplier: 5.0
+  flex:
+    num_outer_iterations: 5
+    num_inner_iterations: 20
+    warm_start: 0.8
+    relaxation: 0.75 

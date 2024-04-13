@@ -1,6 +1,5 @@
 import os
 from isaacgym.torch_utils import *
-from zmq import PROTOCOL_ERROR_ZAP_INVALID_STATUS_CODE
 from tasks.franka_cabinet_PC_partial import OneFrankaCabinetPCPartial
 from Collision_Predictor_Module.CollisionPredictor.code.train_with_RL import CollisionPredictor
 from utils.gpu_mem_track import MemTracker

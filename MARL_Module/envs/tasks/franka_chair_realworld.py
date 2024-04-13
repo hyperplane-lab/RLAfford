@@ -6,6 +6,7 @@ from isaacgym.torch_utils import *
 import numpy as np
 from random import shuffle, randint
 import yaml
+from tasks.franka_chair_PC_partial_cp_map import TwoFrankaChairPCPartialCPMap
 from tasks.franka_chair import TwoFrankaChair
 from utils.contact_buffer import ContactBuffer
 from tqdm import tqdm
@@ -17,7 +18,7 @@ def quat_axis(q, axis=0):
     basis_vec[:, axis] = 1
     return quat_rotate(q, basis_vec)
 
-class TwoFrankaChairRealWorld(TwoFrankaChair) :
+class TwoFrankaChairRealWorld(TwoFrankaChairPCPartialCPMap) :       # Or TwoFrankaChair to get state observations
 
     def __init__(self, cfg, sim_params, physics_engine, device_type, device_id, headless, agent_index=[[[0, 1, 2, 3, 4, 5]], [[0, 1, 2, 3, 4, 5]]], is_multi_agent=False, log_dir=None):
         
