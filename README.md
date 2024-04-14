@@ -63,6 +63,8 @@ pip install -e .
 
 Download the dataset from [google drive](https://drive.google.com/drive/folders/1FyTuz17uSmAbVSmJUbgb-7OgRM5TalCK?usp=sharing) and extract it. Move the `asset` folder to the root of this project. The dataset includes objects from SAPIEN dataset along with additional information processed by us. Code to prepare the dataset can be accessed in [this github repo](https://github.com/boshi-an/SapienDataset).
 
+The part of the dataset for Pick and Place task consists of objects from different sources, so it took us some time to get all the license and approval we need to release the data. Now you can found it from [another googl drive](https://drive.google.com/file/d/11G3r2mvAUzzetg_0APJd-eSMbprrMAvW/view?usp=sharing).
+
 ## Reproduce the Results
 
 Once the dataset is ready, you will be able to run the whole training and testing process using the command in [Experiments.md](https://github.com/hyperplane-lab/RLAfford/blob/main/Experiments.md).
